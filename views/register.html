@@ -40,7 +40,7 @@
 </head>
 <body class="host_version"> 
 
-	<!-- LOADER -->
+    <!-- LOADER -->
 	<div id="preloader">
 		<div class="loader-container">
 			<div class="progress-br float shadow">
@@ -49,8 +49,8 @@
 		</div>
 	</div>
 	<!-- END LOADER -->	
-
-    <!-- Start header -->
+	
+	<!-- Start header -->
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
@@ -64,15 +64,15 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
 						<li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
 						<li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-						<li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-                        <li><a class="hover-btn-new log orange mr-2" href="login.html"><span><i class="fa fa-sign-in" aria-hidden="true"></i></span></a></li>
-						<li><a class="hover-btn-new log orange" href="register.html"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span></a></li>
+                        <li><a class="hover-btn-new log orange mr-2" href="#" data-toggle="modal" data-target="#login"><span><i class="fa fa-sign-in" aria-hidden="true"></i></span></a></li>
+						<li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#signup"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span></a></li>
                     </ul>
 				</div>
 			</div>
@@ -80,42 +80,27 @@
 	</header>
 	<!-- End header -->
 	
-	<div class="all-title-box">
-		<div class="container text-center">
-			<h1>Contact<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
-		</div>
-	</div>
-	
-    <div id="contact" class="section wb">
-        <div class="container">
+	        <div class="container">
             <div class="section-title text-center">
-                <h3>Need Help? Sure we are Online!</h3>
-                <p class="lead">Let us give you more details about the special offer website you want us. Please fill out the form below. <br>We have million of website owners who happy to work with us!</p>
-            </div><!-- end title -->
+                <h3 class="mt-5">REGISTER</h3>
 
             <div class="row">
                 <div class="col-xl-12 col-md-12 col-sm-12">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="contactform" class="" action="contact.php" name="contactform" method="post">
+                        <form class="" name="contactform" method="post">
                             <div class="row row-fluid">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+							    <div class="offset-1 col-lg-10 col-md-10 col-sm-10">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Name">
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                <div class="offset-1 col-lg-10 col-md-10 col-sm-10">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                                <div class="offset-1 col-lg-10 col-md-10 col-sm-10">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
-                                </div>
-                                <div class="text-center pd">
-                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">SEND</button>
+                                <div class="offset-1 col-lg-10 col-md-10 col-sm-10">
+                                    <button type="submit" value="LOGIN" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">REGISTER</button>
                                 </div>
                             </div>
                         </form>
@@ -123,8 +108,8 @@
                 </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->
-    </div><!-- end section -->
-
+	 </div><!-- end container -->
+	
 
     <footer class="footer">
         <div class="container">
@@ -134,8 +119,8 @@
                         <div class="widget-title">
                             <h3>About US</h3>
                         </div>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
-                        <div class="footer-right">
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>   
+						<div class="footer-right">
 							<ul class="footer-links-soi">
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-github"></i></a></li>
@@ -143,7 +128,7 @@
 								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
 								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
 							</ul><!-- end links -->
-						</div>
+						</div>						
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
 
@@ -197,6 +182,14 @@
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
-
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
 </body>
 </html>
