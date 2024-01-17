@@ -39,7 +39,7 @@ const loginUser = async (req, res) => {
 
     // USER SESSION
     req.session.userID = user._id;
-    res.status(200).redirect("/");
+    res.status(200).redirect("/users/dashboard");
   } catch (error) {
     console.error(error);
     res.status(500).json({
@@ -49,9 +49,17 @@ const loginUser = async (req, res) => {
   }
 };
 
-const logoutUser = async (req, res) => {
+const logoutUser = (req, res) => {
   req.session.destroy(() => {
     res.redirect("/");
+  });
+};
+
+const getDashboardPage = async (req, res) => {
+  const user = await User.findOne({ _id: req.session.userID });
+  res.status(200).render("dashboard", {
+    page_name: "dashboard",
+    user, //dashboard.ejs içinde yakalamak için.
   });
 };
 
@@ -59,4 +67,5 @@ module.exports = {
   createUser,
   loginUser,
   logoutUser,
+  getDashboardPage,
 };
