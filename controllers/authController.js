@@ -24,7 +24,7 @@ const loginUser = async (req, res) => {
     if (!user) {
       return res.status(401).json({
         status: "fail",
-        error: "User not found",
+        error: "Invalid email or password",
       });
     }
 
@@ -33,12 +33,13 @@ const loginUser = async (req, res) => {
     if (!passwordMatch) {
       return res.status(401).json({
         status: "fail",
-        error: "Invalid password",
+        error: "Invalid email or password",
       });
     }
 
-    // Burada kullanıcı oturumu başlatılabilir.
-    res.status(200).send("You are logged in");
+    // USER SESSION
+    req.session.userID = user._id;
+    res.status(200).redirect("/");
   } catch (error) {
     console.error(error);
     res.status(500).json({
