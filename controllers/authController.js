@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
 const Category = require("../models/Category");
+const Course = require("../models/Course");
 
 const createUser = async (req, res) => {
   try {
@@ -56,10 +57,12 @@ const logoutUser = (req, res) => {
 const getDashboardPage = async (req, res) => {
   const user = await User.findOne({ _id: req.session.userID });
   const categories = await Category.find();
+  const courses = await Course.find({ user: req.session.userID });
   res.status(200).render("dashboard", {
     page_name: "dashboard",
     user, //dashboard.ejs içinde yakalamak için.
     categories,
+    courses,
   });
 };
 
