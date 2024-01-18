@@ -57,7 +57,7 @@ const sendEmail = async (req, res) => {
     // send mail with defined transport object
     const info = await transporter.sendMail({
       from: '"Smart EDU contact" <digitalistway@gmail.com>', // sender address
-      to: "yasarnazimsari@gmail.com", // list of receivers
+      to: process.env.NODEMAILER_USER, // list of receivers
       subject: "Smart EDU Contact Form New Message", // Subject line
       html: outputMessage, // html body
     });
